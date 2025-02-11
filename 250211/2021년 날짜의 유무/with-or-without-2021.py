@@ -20,7 +20,8 @@ def cal(M,D):
         if D<=31:
             print("Yes")  
         else:
-             print("No") 
-         
+            print("No") 
+    else:
+        print("No") 
 
 cal(M,D)
