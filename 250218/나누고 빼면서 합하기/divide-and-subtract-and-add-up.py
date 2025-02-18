@@ -1,21 +1,17 @@
 n, m = map(int, input().split())
-A = list(map(int, input().split()))
+A = [0] + list(map(int, input().split()))
 
-sum_list = []
-result = 0  # 초기 result는 0으로 설정
+def get_answer():
+    global m
+    
+    return_value = 0
+    while m:
+        return_value += A[m]
 
-# m이 0보다 클 때까지 반복
-while m > 0:
-    if m % 2 == 0:  # m이 짝수일 때
-        sum_list.append(m // 2)
-        m //= 2
-    else:  # m이 홀수일 때
-        sum_list.append(m - 1)
-        m = (m - 1) // 2
+        if m % 2 == 0:
+            m //= 2
+        else:
+            m -= 1
+    return return_value
 
-# sum_list에서 계산한 인덱스를 통해 결과를 구함
-for index in sum_list:
-    if 0 <= index < len(A):  # A 배열의 인덱스 범위 내에서만 접근
-        result += A[index]
-
-print(result-1)
+print(get_answer())
