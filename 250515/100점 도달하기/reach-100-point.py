@@ -10,11 +10,9 @@ while N <=100:
     elif 80 > N >=70:
         print("C", end=" ")
 
-     elif 70 > N >=60:
+    elif 70 > N >=60:
         print("D", end=" ")
 
-     elif 60 > N :
+    elif 60 > N:
         print("F", end=" ")
-    
-    
     N+=1
